@@ -56,6 +56,7 @@ const Button = styled.div`
 
 const Header: React.FC = () => {
   const iconsWidth = 24;
+  const labels = ['CV', 'Works', 'Skills', 'Stack', 'Graduation', 'Projects'];
 
   return (
     <Container>
@@ -75,12 +76,16 @@ const Header: React.FC = () => {
           <img src={TelegramLogo} alt="Telegram" width={iconsWidth} />
         </a>
       </Button>
-      <Button>CV</Button>
-      <Button>Works</Button>
-      <Button>Skills</Button>
-      <Button>Stack</Button>
-      <Button>Graduation</Button>
-      <Button>Projects</Button>
+
+      {labels.map((item) => {
+        return (
+          <Button>
+            <a href={`#${item}`} rel="noreferrer">
+              {item}
+            </a>
+          </Button>
+        );
+      })}
     </Container>
   );
 };
