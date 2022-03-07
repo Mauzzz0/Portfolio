@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import Photo from '../../assets/images/T0HJW8AER-U026TJW99NG-c3930c1cc5a3-512.jpeg';
 import moment from 'moment';
 
 const Container = styled.div`
-  width: 70%;
+  width: 40%;
+  margin-top: 50px;
   background: #eeeeee;
   //text-align: center;
   //height: 64px;
@@ -45,14 +45,14 @@ const Container = styled.div`
   }
 `;
 
-const PersonalData: React.FC = () => {
+const AboutData: React.FC = () => {
   const age = (moment().diff(moment('2002-01-15')) / 1000 / 31622400).toFixed();
 
   return (
     <Container>
-      <img src={Photo} alt="Me" />
       <div className="flex-wrapper">
-        <div id="name">Ruslan Semak Dmitrievich</div>
+        <div id="name">About</div>
+        <p>awdawdawdawd</p>
         <div id="age">{age} y.o.</div>
         <div id="bg">Software Engineer</div>
         <div id="bg">Web Back-end Developer</div>
@@ -61,4 +61,4 @@ const PersonalData: React.FC = () => {
   );
 };
 
-export default PersonalData;
+export default AboutData;

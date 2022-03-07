@@ -1,12 +1,14 @@
 import React from 'react';
 import MainLayout from '../components/Layouts/MainLayout';
 import PersonalData from '../components/Data/PersonalData';
+import AboutData from '../components/Data/AboutData';
 // import Body from '../components/Body/Body';
 
 const MainPage: React.FC = () => {
   return (
     <MainLayout>
       <PersonalData />
+      <AboutData />
       {/*<SideMenu />*/}
       {/*<Main>*/}
       {/*  <Switch>*/}
